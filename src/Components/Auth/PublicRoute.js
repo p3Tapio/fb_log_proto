@@ -7,7 +7,7 @@ export default function PublicRoute({ component: Component, ...rest }) {
         <Route {...rest}
             render={(props) => !getToken() ?
                 <Component {...props} />
-                : <Redirect to={{ pathname: '/userpage' }} />}
+                : <Redirect to={{ pathname: '/private' }} />}
         />
     )
 }

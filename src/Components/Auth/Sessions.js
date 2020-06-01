@@ -17,6 +17,7 @@ export const getUser = () => {
 export const removeUserSession = () => {
     sessionStorage.removeItem('accessToken');
     sessionStorage.removeItem('user');
+    window.location.reload()            // reload on workaround console.loggerin erroriin: "You are overriding current access token, that means some other app is expecting different access token and you will probably break things."
 }
 
 
